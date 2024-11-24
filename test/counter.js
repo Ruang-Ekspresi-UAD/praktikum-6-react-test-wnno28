@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+class Counter {
+  constructor() {
+    this.value = 0; // Default value is 0
+  }
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+  increment() {
+    this.value += 1;
+  }
 
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
+  decrement() {
+    this.value -= 1;
+  }
 
-  return (
-    <div>
-      <h1 data-testid="counter-value">{count}</h1>
-      <button onClick={increment} data-testid="increment-button">
-        Increment
-      </button>
-      <button onClick={decrement} data-testid="decrement-button">
-        Decrement
-      </button>
-    </div>
-  );
-};
+  reset() {
+    this.value = 0;
+  }
+}
 
-export default Counter;
+module.exports = Counter;

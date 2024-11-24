@@ -1,7 +1,5 @@
-import React from 'react';
+function display(value) {
+  return `Current value: ${value}`;
+}
 
-const Display = ({ value }) => {
-  return <p data-testid="display-value">Value: {value}</p>;
-};
-
-export default Display;
+module.exports = display;
